@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a342cb24-751e-4e2b-83b5-cb9077c771c5/deploy-status)](https://app.netlify.com/sites/unifacef-reactjs/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
