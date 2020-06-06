@@ -1,14 +1,34 @@
+import { createBrowserHistory } from 'history';
+import { Provider } from 'mobx-react';
+import { syncHistoryWithStore } from 'mobx-react-router';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router } from 'react-router-dom';
+import 'semantic-ui-css/semantic.min.css';
 import './index.css';
-import App from './App';
+import * as store from './mobx';
+import { router } from './mobx';
+import './plugins/sentry.plugins';
+import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
+
+
+
+const rootElement = document.getElementById('root');
+const browserHistory = createBrowserHistory();
+const history = syncHistoryWithStore(browserHistory, router);
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider {...store}>
+      <Router history={history}>
+        <Routes />
+      </Router>
+
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 );
 
 // If you want your app to work offline and load faster, you can change
