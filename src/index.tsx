@@ -11,6 +11,8 @@ import { router } from './mobx';
 import './plugins/sentry.plugins';
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
+import Loading from './components/loading';
+import './apis/axios.api';
 
 
 
@@ -22,10 +24,10 @@ const history = syncHistoryWithStore(browserHistory, router);
 ReactDOM.render(
   <React.StrictMode>
     <Provider {...store}>
+      <Loading />
       <Router history={history}>
         <Routes />
       </Router>
-
     </Provider>
   </React.StrictMode>,
   rootElement

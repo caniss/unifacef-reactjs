@@ -10,7 +10,7 @@ interface Props {
 
 @inject('home')
 @observer
-export default class home extends React.Component<Props> {
+export default class Home extends React.Component<Props> {
     async componentDidMount() {
         const { buildReords } = this.props.home
         await buildReords();
