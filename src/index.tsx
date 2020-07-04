@@ -9,6 +9,7 @@ import './index.css';
 import * as store from './mobx';
 import { router } from './mobx';
 import './plugins/sentry.plugins';
+import './plugins/one-signal.plugin'
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
 import Loading from './components/loading';
