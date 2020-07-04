@@ -8,6 +8,7 @@ import StarWarsDetails from "../containers/star-wars-details";
 import Tags from '../containers/tags';
 import Register from "../containers/register";
 import Corona from "../containers/corona";
+import Login from "../containers/login";
 
 interface EndPointsProps extends RouteProps {
     name?: string
@@ -16,7 +17,6 @@ interface EndPointsProps extends RouteProps {
 const publicUrl = process.env.PUBLIC_URL;
 
 export const endpoints: EndPointsProps[] = [
-    { path: `${publicUrl}/`, component: Home, exact: true },
     { path: `${publicUrl}/home`, name: 'Home', component: Home, exact: true },
     { path: `${publicUrl}/combustivel`, name: 'Combustível', component: Combustivel, exact: true },
     { path: `${publicUrl}/star-wars`, name: 'StarWars', component: StarWars, exact: true },
@@ -28,3 +28,8 @@ export const endpoints: EndPointsProps[] = [
     { path: `${publicUrl}/sobre`, name: 'Sobre', component: Sobre, exact: true },
 ];
 
+export const loginEndpoints: EndPointsProps[] = [
+    { path: `${publicUrl}/`, component: Login, exact: true },
+    { path: `${publicUrl}/login`, component: Login, exact: true },
+    { path: `${publicUrl}/logout`, component: Login, exact: true },
+];
