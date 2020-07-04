@@ -8,7 +8,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 import * as store from './mobx';
 import { router } from './mobx';
-import './plugins/sentry.plugins';
+import './plugins/sentry.plugin';
 import './plugins/one-signal.plugin'
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
